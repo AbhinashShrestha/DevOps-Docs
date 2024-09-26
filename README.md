@@ -1,5 +1,5 @@
 # DevOps-Docs
-THis contains  document i made in Obsidian related to various DevOps configuration and concepts for my future refrence
+This document was made for personal use hence doesn't adhere to standards and is not all encompassing.
 
 ## Disclaimer:
 This is not a guide.
