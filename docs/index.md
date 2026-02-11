@@ -1,33 +1,15 @@
-# DevOps Notes
-
-Short, task-focused notes collected over time.
-
-## Quick start
-- Use the left sidebar to browse by filename/folder.
-- Use browser search (`Ctrl+F`) inside a page.
-
-## Common topics
-- Kubernetes / K3s
-- CI/CD (Jenkins, GitLab, Argo CD)
-- Observability (ELK, Prometheus, Grafana/Loki)
-- Nginx / HAProxy
-- Storage and Linux tooling
-
+---
+title: DevOps Notes
 ---
 
-## All pages
-Below is an automatically generated list of every page in this site.
+# DevOps Notes
 
-{% for nav_item in nav %}
-- [{{ nav_item.title }}]({{ nav_item.url }})
-  {% if nav_item.children %}
-  {% for child in nav_item.children %}
-  - [{{ child.title }}]({{ child.url }})
-    {% if child.children %}
-    {% for grandchild in child.children %}
-    - [{{ grandchild.title }}]({{ grandchild.url }})
-    {% endfor %}
-    {% endif %}
-  {% endfor %}
+## All pages
+<ul>
+{% assign items = site.pages | sort: "title" %}
+{% for p in items %}
+  {% if p.name != "index.md" and p.path contains ".md" %}
+    <li><a href="{{ p.url | relative_url }}">{{ p.title | default: p.name | replace: ".md","" }}</a></li>
   {% endif %}
 {% endfor %}
+</ul>
